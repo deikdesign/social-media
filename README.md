@@ -2,7 +2,7 @@
 
 > Social Media application. You can sign up with and email and password and then create posts and add others as a friend.
 
-![alt text](https://ibb.co/yqXN2Vz "Preview Img")
+![alt text](https://imgur.com/tUnqH94 "Preview Img")
 
 ## Built With
 
