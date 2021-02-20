@@ -8,6 +8,9 @@
 
 - Ruby v2.7.0
 
+## Database Diagram
+![alt text](https://imgur.com/CMAGx10.jpg "Preview Img")
+
 
 ## Live Demo
 
