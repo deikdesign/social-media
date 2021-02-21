@@ -2,14 +2,17 @@
 
 > Social Media application. You can sign up with and email and password and then create posts and add others as a friend.
 
-![alt text](https://imgur.com/tUnqH94.jpg "Preview Img")
+![alt text](https://imgur.com/Btmh5Ox.jpg "Preview Img")
+
+![alt text](https://imgur.com/lNhUcbU.jpg "Preview Img")
+
 
 ## Built With
 
 - Ruby v2.7.0
 
 ## Database Diagram
-![alt text](https://imgur.com/CMAGx10.jpg "Preview Img")
+![alt text](https://imgur.com/cWQx0zx.jpg "Preview Img")
 
 
 ## Live Demo
