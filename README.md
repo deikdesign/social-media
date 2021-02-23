@@ -12,7 +12,7 @@
 - Ruby v2.7.0
 
 ## Database Diagram
-![alt text](https://imgur.com/cWQx0zx.jpg "Preview Img")
+![screenshot](./docs/StayInTouchERD.png)
 
 
 ## Live Demo
