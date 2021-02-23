@@ -30,20 +30,16 @@
 ### Setup
 
 
+### Authors
+## Janluc Saneaux
+- 👤GitHub: [Janluc Saneaux](https://github.com/janluc)
+- Twitter: [@janluc123](https://twitter.com/janluc123)
+- Linkedin: [Janluc Saneaux](https://www.linkedin.com/in/janluc-saneaux-91707a1b4/)
 
-## Authors
-
-👤 ** **
-
-- Github: [@]()
-- Twitter: [@]()
-- LinkedIn: []()
-
-👤 ** **
-
-- Github: [@](
-- Twitter: [@]()
-- Linkedin: []()
+### Author
+## Deyan Todorov
+- 👤GitHub: [deikdesign](https://github.com/deikdesign/)
+- Twitter: [@deikdesign](https://twitter.com/deikdesign)
 
 ## 🤝 Contributing
 
