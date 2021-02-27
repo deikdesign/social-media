@@ -6,7 +6,7 @@
       <p>Already Friends!</p>
     <% else %>
       <% if current_user.pending_friends.include?(@user) %>
-        Friend Request Pending
+        Friend Request Pending!
         <% elsif current_user.friend_requests.each do |request|%>
           <% if @user == request %>
             <%= form_with model: @friendship, url: '/accept-request', method: :post do |form|%>
