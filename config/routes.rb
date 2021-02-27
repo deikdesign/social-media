@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  post '/friend-request', to: 'friendships#friend_request'
+  post '/accept-request', to: 'friendships#accept_request'
+  post '/reject-request', to: "friendships#reject_request"
 end

@@ -12,10 +12,11 @@ class User < ApplicationRecord
 
   has_many :friendships
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
+  accepts_nested_attributes_for :friendships
 
   def friends
     friends_array = friendships.map{|friendship| friendship.friend if friendship.confirmed}
-    friends_array + inverse_friendships.map{|friendship| friendship.user if friendship.confirmed}
+    friends_array += inverse_friendships.map{|friendship| friendship.user if friendship.confirmed}
     friends_array.compact
   end
 
@@ -30,7 +31,7 @@ class User < ApplicationRecord
   end
 
   def confirm_friend(user)
-    friendship = inverse_friendships.find{|friendship| friendship.user == user}
+    friendship = inverse_friendships.find { |friend| friend.user == user }
     friendship.confirmed = true
     friendship.save
   end
@@ -38,5 +39,4 @@ class User < ApplicationRecord
   def friend?(user)
     friends.include?(user)
   end
-
 end
