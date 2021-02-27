@@ -27,9 +27,9 @@ class FriendshipsController < ApplicationController
       if friendship
         friendship.destroy
         redirect_to current_user
-      else 
+      else
         redirect_to root_path
-      end 
+      end
     end
   end
 
