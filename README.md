@@ -14,7 +14,6 @@
 ## Database Diagram
 ![screenshot](./docs/StayInTouchERD.png)
 
-
 ### Prerequisites
 
 - Ruby 2.7.2
@@ -28,6 +27,7 @@
 - afterwards type 'rails s'
 - Open your browser and in the address bar type 'http://localhost:3000/'
 - You should be able to make an account, and make posts, like posts, and accept/reject friends
+
 
 ### Authors
 ## Janluc Saneaux
