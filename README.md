@@ -14,20 +14,19 @@
 ## Database Diagram
 ![screenshot](./docs/StayInTouchERD.png)
 
-
-## Live Demo
-
-
-
-## Getting Started
-
-
-
 ### Prerequisites
 
-
+- Ruby 2.7.2
+- Rails
+- Postgres
 
 ### Setup
+- Refer to the [Postgres Documentation](https://www.postgresql.org/docs/) on how to setup a local server
+- Open your terminal/command/console and type in 'rails db:create'
+- with the console still open, type in 'rails db:migrate'
+- afterwards type 'rails s'
+- Open your browser and in the address bar type 'http://localhost:3000/'
+- You should be able to make an account, and make posts, like posts, and accept/reject friends
 
 
 ### Authors

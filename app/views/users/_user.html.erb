@@ -1,0 +1,17 @@
+<li>
+  Name: <%= user.name %>
+  <span class="profile-link">
+    <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
+      <% unless current_user == user %>
+        <% unless current_user.friends.include?(user) %>
+          <% unless current_user.pending_friends.include?(user) or current_user.friend_requests.include?(user)%>
+            <%= form_with model: @friendship, url: '/friend-request', method: :post, class: "index-submit" do |form|%>
+              <%= form.hidden_field :friend_id, value: "#{user.id}" %>
+              <%= form.submit "Send Friend Request!"%>
+            <% end %>
+          <% end %>
+      <% end %>
+    <% end %>
+  </span>
+
+</li>
