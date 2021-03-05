@@ -2,11 +2,10 @@
   <h2><%= "Name: #{@user.name}" %></h2>
   <br>
   <% unless current_user == @user %>
-    <% mutual_friends = current_user.friends & @user.friends %>
-    <% if mutual_friends.any? %>
+    <% if @mutual_friends.any? %>
       <h3>Friends in common:</h3>
       <ul>
-        <%mutual_friends.each do |friend|%>
+        <% @mutual_friends.each do |friend|%>
           <li><%=friend.name%></li>
         <% end %>
       </ul>
