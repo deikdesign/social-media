@@ -30,6 +30,8 @@
 - Open your browser and in the address bar type 'http://localhost:3000/'
 - You should be able to make an account, and make posts, like posts, and accept/reject friends
 
+### Tests
+- Open your terminal/command/console and type in 'rspec --format documentation' 
 
 ### Authors
 ## Janluc Saneaux
