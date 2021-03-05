@@ -19,8 +19,10 @@
 - Ruby 2.7.2
 - Rails
 - Postgres
+- Clone the repo
 
 ### Setup
+- Refer to the [GitHub Documentation](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) on how to clone the repo in your preferred method (Through Github desktop or the command line)
 - Refer to the [Postgres Documentation](https://www.postgresql.org/docs/) on how to setup a local server
 - Open your terminal/command/console and type in 'rails db:create'
 - with the console still open, type in 'rails db:migrate'
