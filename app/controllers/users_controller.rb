@@ -14,8 +14,8 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
   def mutual_friends(user)
-   current_user.friends & user.friends
+    current_user.friends & user.friends
   end
 end
