@@ -20,16 +20,15 @@ class FriendshipsController < ApplicationController
     else
       redirect_to root_path
     end
-  
-    
   end
 
   def reject_request
-    friend = User.find(friendship_params[:friend_id])
     friendship = Friendship.find_by(friend_id: current_user.id)
     if friendship
-      friendship.destroy  
-      redirect_to current_user
+      friendship.destroy
+      redirect_to
+    else
+      redirect_to root_path
     end
   end
 
