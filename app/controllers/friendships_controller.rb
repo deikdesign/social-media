@@ -28,7 +28,7 @@ class FriendshipsController < ApplicationController
     friend = User.find(friendship_params[:friend_id])
     friendship = Friendship.find_by(friend_id: current_user.id)
     if friendship
-      friendship.destroy
+      friendship.destroy  
       redirect_to current_user
     end
   end

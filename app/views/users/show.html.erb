@@ -2,15 +2,14 @@
   <h2><%= "Name: #{@user.name}" %></h2>
   <br>
   <% unless current_user == @user %>
-    <% if @mutual_friends.any? %>
-      <h3>Friends in common:</h3>
-      <ul>
-        <% @mutual_friends.each do |friend|%>
-          <li><%=friend.name%></li>
-        <% end %>
-      </ul>
+    <% unless mutual_friends(@user).nil? %>
+      <h3>Mutual friends: </h3>
+      <%= mutual_friends(@user)%>
+      <br>
     <% end %>
+      
     <% if current_user.friend?(@user) %>
+      <br>
       <p>Already Friends!</p>
     <% else %>
       <% if current_user.pending_friends.include?(@user) %>
