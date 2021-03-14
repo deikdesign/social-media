@@ -3,75 +3,20 @@
   <br>
   <% unless current_user == @user %>
     <% unless mutual_friends(@user).nil? %>
-      <h3>Mutual friends: </h3>
+      <h3>Mutual: </h3>
       <%= mutual_friends(@user)%>
       <br>
     <% end %>
-      
-    <% if current_user.friend?(@user) %>
-      <br>
-      <p>Already Friends!</p>
-    <% else %>
-      <% if current_user.pending_friends.include?(@user) %>
-        Friend Request Pending!
-        <% elsif current_user.friend_requests.each do |request|%>
-          <% if @user == request %>
-            <%= form_with model: @friendship, url: '/accept-request', method: :post do |form|%>
-                <%= form.hidden_field :friend_id, value: "#{request.id}" %>
-                <div>
-                <%= form.submit "Accept Request!"%>
-              </div>
-            <% end %>
-            <%= form_with model: @friendship, url: '/reject-request', method: :post do |form|%>
-              <%= form.hidden_field :friend_id, value: "#{request.id}" %>
-              <div>
-                <%= form.submit "Reject Request!"%>
-              </div>
-            <% end %>
-          <% end %>
-        <% end %>
-      <% else %>
-        <p>Send Friend Request</p>
-        <%= form_with model: @friendship, url: '/friend-request', method: :post do |form|%>
-          <% flash.each do |type, msg| %>
-            <div>
-              <h3><%= msg %></h3>
-            </div>
-            <% end %>
-            <%= form.hidden_field :friend_id, value: "#{@user.id}" %>
-            <div class="actions">
-            <%= form.submit "Send Friend Request!"%>
-          </div>
-        <% end %>
-      <% end %>
-    <% end %>
+
+    <br>
+    <%= friends?(@user)%>
+
   <% else %>
-    <% unless current_user.friend_requests.empty? %>
-      <h3>Friend Requests: </h3>
-      <ul>
-        <% current_user.friend_requests.each do |request|%>
-        <li><%=request.name %>
-            <%= form_with model: @friendship, url: '/accept-request', method: :post do |form|%>
-                <%= form.hidden_field :friend_id, value: "#{request.id}" %>
-                <div>
-                <%= form.submit "Accept Request!"%>
-              </div>
-            <% end %>
-            <%= form_with model: @friendship, url: '/reject-request', method: :post do |form|%>
-              <%= form.hidden_field :friend_id, value: "#{request.id}" %>
-              <div>
-                <%= form.submit "Reject Request!"%>
-              </div>
-            <% end %>
-        <% end %>
-        </li>
-
-      </ul>
-    <% end %>
-
+    <ul>
+      <%= incoming_requests%>
+    </ul>
   <% end %>
 
-  
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
