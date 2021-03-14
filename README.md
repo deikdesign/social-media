@@ -56,10 +56,3 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - [Microverse](https://www.microverse.org/).
-
-
-## 📝 License
-
-This project is [MIT licensed](LICENSE).
-
-![](https://img.shields.io/badge/Microverse-blueviolet)
