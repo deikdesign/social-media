@@ -1,11 +1,11 @@
 <%= form_with model: @friendship, url: '/friend-request', method: :post do |form|%>
-          <% flash.each do |type, msg| %>
-            <div>
-              <h3><%= msg %></h3>
-            </div>
-            <% end %>
-            <%= form.hidden_field :friend_id, value: "#{@user.id}" %>
-            <div class="actions">
-            <%= form.submit "Send Friend Request!"%>
-          </div>
-        <% end %>
+    <% flash.each do |type, msg| %>
+    <div>
+        <h3><%= msg %></h3>
+    </div>
+    <% end %>
+    <%= form.hidden_field :friend_id, value: "#{@user.id}" %>
+    <div class="actions">
+    <%= form.submit "Send Friend Request!"%>
+    </div>
+<% end %>
