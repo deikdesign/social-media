@@ -13,23 +13,22 @@ class FriendshipsController < ApplicationController
   def accept_request
     value = friendship_params[:friend_id]
     friend = User.find(value)
-    current_user.confirm_friend(friend)
-    redirect_to current_user
+    friendship = friend.friendships.find_by(friend_id: current_user.id)
+    if current_user.friend_requests.include?(friend)
+      friendship.confirm_friend
+      redirect_to current_user
+    else
+      redirect_to root_path
+    end
   end
 
   def reject_request
-    friendship = Friendship.find_by(user_id: current_user.id, friend_id: friendship_params[:friend_id])
+    friendship = Friendship.find_by(friend_id: current_user.id)
     if friendship
       friendship.destroy
-      redirect_to current_user
+      redirect_to
     else
-      friendship = Friendship.find_by(user_id: friendship_params[:friend_id], friend_id: current_user.id)
-      if friendship
-        friendship.destroy
-        redirect_to current_user
-      else
-        redirect_to root_path
-      end
+      redirect_to root_path
     end
   end
 

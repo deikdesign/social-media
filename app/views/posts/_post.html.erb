@@ -1,4 +1,5 @@
-<li class="post">
+<% if relevant_post(post) %>
+  <li class="post">
   <div>
     <div class='post-attribution' >
       <%= link_to post.user.name, user_path(post.user), class: 'post-author' %>
@@ -21,3 +22,5 @@
     <% end %>
   </div>
 </li>
+
+<% end %>

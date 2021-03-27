@@ -1,0 +1,16 @@
+
+<li>
+    <%=request.name %>
+    <%= form_with model: @friendship, url: '/accept-request', method: :post do |form|%>
+        <%= form.hidden_field :friend_id, value: "#{request.id}" %>
+        <div>
+        <%= form.submit "Accept Request!"%>
+        </div>
+    <% end %>
+    <%= form_with model: @friendship, url: '/reject-request', method: :post do |form|%>
+        <%= form.hidden_field :friend_id, value: "#{request.id}" %>
+        <div>
+        <%= form.submit "Reject Request!"%>
+        </div>
+    <% end %>
+</li>
