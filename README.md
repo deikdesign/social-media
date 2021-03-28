@@ -14,6 +14,9 @@
 ## Database Diagram
 ![screenshot](./docs/StayInTouchERD.png)
 
+## Live Demo
+- https://radiant-island-89312.herokuapp.com/
+
 ### Prerequisites
 
 - Ruby 2.7.2
@@ -56,3 +59,5 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - [Microverse](https://www.microverse.org/).
+
+![](https://img.shields.io/badge/Microverse-blueviolet)
